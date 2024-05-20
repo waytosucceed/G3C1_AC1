@@ -1,0 +1,212 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="Logo.png">
+
+        <style>
+          
+          #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 1.35vw;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about"> What are we learning today?</h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                   <img id="family" src="2.jpg" style="width:100%;"> 
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" id='storydiv'>
+                   <p id="story" style="text-align:left; width:100%;"> 
+                  <i>  Nouns are words that name people, places, things, or
+                    ideas. They help us identify and refer to specific
+                    entities in our language. </i><br><br>
+                   A list of nouns commonly used is: <br>
+                
+                   ● Animal: Cat <br>
+                   ● Place: Park <br>
+                   ● Thing: Bicycle <br>
+                   ● Person: Girl <br> 
+                </p> 
+            </div>
+        </center>
+        </div>
+        <br>
+        <div class="" style="text-align:center;">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+            
+       
+        </div> 
+    
+
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg","Assets/7.jpg","Assets/8.jpg","Assets/9.jpg","Assets/10.jpg","Assets/11.jpg","Assets/12.jpg","Assets/13.jpg",];
+            var para=["Once upon a time, in the quaint village of Hangleton,there lived a young girl named Mary. Mary was a spirited and inquisitive child, with a mop of curly hair and eyes that sparkled with curiosity. <br> <br>She lived in a cosy cottage with her parents, surrounded by lush green fields, groves and towering trees.",
+
+                     " ● <span style='font-weight: bolder;'> Girl:</span> Mary is described as a young girl. Girl is a noun that names a person, specifically a female. <br> <br> ● <span style='font-weight: bolder;'> Cottage: </span> This is where Mary lives with her parents. Cottage is a noun that names a type of house or dwelling. <br> <br> ● <span style='font-weight: bolder;'> Fields, Groves and Trees: </span> These surround Mary's cottage. Fields, groves and trees are nouns that name things or objects in the environment.",
+
+                   
+
+                    "Nouns are words that <i style='color:blue'>name people, places, things, or ideas</i>. We encounter nouns all the time in our everyday language, and they help us communicate and understand the world around us. <br> <br>As we continue with the story, let's pay attention to the nouns we encounter and see how they help us understand the characters, settings, and events.",
+
+                    "One bright and sunny morning, as Mary was exploring the woods near her home, she stumbled upon a hidden path that she had never noticed before. Intrigued, she followed the winding trail deeper into the forest, her heart pounding with excitement.",
+
+                     "After what felt like an eternity of twists and turns, Mary emerged into a sunlit clearing and gasped in wonder. Before her lay a breathtakingly beautiful garden, unlike anything she had ever seen before. The air was filled with the sweet fragrance of flowers, and the trees whispered secrets in the gentle breeze.",
+
+                     "PQ:<br> <br> 1. What are some nouns in the story that name things Mary found in the woods? <br> <br> 2. Can you point out a noun that tells us about something we can smell in the garden? <br> <br> 3. What are two nouns that show how Mary felt when she found the garden?",
+
+
+                     "Nouns are categorised in various ways, and we'll start by exploring the five primary types. These include<br>    ● Proper noun <br>  ● Common noun <br>  ● Collective noun <br> ● Abstract noun <br>  ● Concrete noun<br>",
+
+                     "Mary 's eyes widened with awe as she wandered through the garden, marvelling at its beauty. Each flower seemed to shimmer with its own unique magic, from the delicate bluebells that tinkled like bells to the fiery marigolds that glowed with an inner light.",
+
+                     "Examples of proper nouns: <br> ● Names of individuals like Robert, Alisha, Balu, or Harmeet. <br> ● Names of geographical features like the Ganga river or the Himalayas mountain range. <br> ● Names of nations such as India, Australia or England. <br> ● Names of cities like New Delhi or Mumbai. <br> ● Names of Indian states such as Tamil Nadu or Punjab. <br> It's important to remember that proper nouns always begin with a capital letter.",
+
+                     "<span style='color: blue;'> Common Noun: </span> <br> Common nouns refer to general categories of people,things, or objects. <br> <span style='color: blueviolet;'> <u> Examples </u> </span> of common nouns include girl, boy, city, fruit, or vegetable.",
+
+                     "Examples of collective nouns : <br> ● A herd of cattle (a group of cows and buffaloes). <br> ● A flock of birds (a gathering of birds). <br> ● A swarm of bees (a collection of honey bees). <br> ● An army (a group of soldiers). <br> ● A crowd (a gathering of people). <br> ● A fleet of ships (a collection of ships). <br> ● A class (a group of students within a classroom).",
+
+        
+
+                    "As she explored further, Mary discovered that the garden was filled with wondrous surprises. There were roses that could grant wishes, daisies that could bring laughter, and sunflowers that could light up the darkest night. She felt as though she had stumbled upon a hidden world of enchantment, just waiting to be discovered.",  
+
+                    "Examples of abstract nouns : <br> ● Abstract noun of qualities: goodness, courage, kindness. <br> ● Abstract noun of states: wellness, sickness, childhood. <br> ● Abstract noun of action: movement, judgement, theft. <br> ● Abstract noun of idea: happiness, freedom, trust. <br> ● Abstract noun of process: growth, filtration, electricity. ",
+
+                    ]
+            
+                    var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("family").src = "last part.jpg";
+                    document.getElementById("story").style.fontSize="1.35vw"
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "Let's discuss some examples from the story: ";
+                    document.getElementById("story").innerHTML = " They are divided into countable and uncountable nouns.<br><u>Countable nouns are those that can be counted,while uncountable nouns cannot.</u> <br> ● Examples of countable nouns include chair, table, book, pen, city, bird, man, woman. <br> ● Examples of uncountable nouns include milk, rice, sugar, oil, dust, smoke, heat, cold, trade. <br> Countable nouns are further divided into two types - singular and plural. We shall learn about it in a later lesson.";
+                }
+                else{
+                    document.getElementById("story").style.fontSize="1.35vw"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="The Enchanted Garden Part 1"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="1.35vw"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="What are we learning today?"
+                    document.getElementById("story").innerHTML = ' Nouns are words that name people, places, things, or ideas. They help us identify and refer to specific entities in our language. <br><br>   A list of nouns commonly used is: <br>   ● Animal: Cat <br>   ● Place: Park <br> ● Thing: Bicycle <br>    ● Person: Girl <br> ';
+                }
+                else{
+                document.getElementById("story").style.fontSize="1.35vw"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="The Enchanted Garden Part 1"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
